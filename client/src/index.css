@@ -1,0 +1,549 @@
+*{
+  margin: 0;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+.editDivHide{
+  border: 1px solid #0061ff;
+  display: none;
+}
+
+.editDivShow{
+  border: 1px solid #0061ff;
+  display: block;
+}
+.app{
+  display: grid;
+  grid-template-columns: 100% ;
+  grid-template-rows: 590px auto ;
+  grid-template-areas: "navbar"
+                        "main" ;
+}
+.navbar{
+  font-family: 'Luckiest Guy', cursive;  height: 35%;
+  grid-area: navbar;
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  background-color: #74a9ff;
+  height: 320px;
+
+
+}
+
+.navbar > ul{
+  display: flex;
+  flex-direction: row;
+}
+
+.main{
+  grid-area: main;
+  position: absolute;
+  height: 85%;
+  bottom: 0;
+  width: 100vw;
+}
+
+nav{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 15px 0 0 0;
+  background-color: #74a9ff;
+}
+
+nav a{
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.3s;
+  font-size: 32px;
+  transition: 0.3s;
+
+}
+
+a:hover{
+  color: #4f7de8;
+
+}
+
+nav div:visited{
+  color: #7fa2f5;
+  font-size: 24px;
+}
+
+
+
+.logo{
+  font-family: 'Dancing Script', cursive;
+  font-size: 45px;
+  color: #ffffff;
+}
+
+
+  .loginDiv , .registerDiv{
+  height: 80% ; 
+  }
+
+.loginLogo, .registerLogo, .chartTopic, .newVacationLogo{ 
+color: #ffffff;
+font-family: 'Luckiest Guy', cursive;  height: 35%;
+  margin-top: 55px;
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 2px;
+  margin-top: -15px;
+  }
+
+.loginForm, .registerForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 70%;
+}
+
+.loginForm h3, .registerForm h3{
+  color: #7fa2f5;
+  font-size: 35px;
+}
+
+.vacationsCon{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+.con{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+}
+
+ .loginInputUsr, .registerInput1{
+   padding: 5px 15px;
+  width: 250px;
+  height: 40px;
+  border: 1 solid grey important!;
+  border-top-left-radius: 8px   important!;
+  border-top-right-radius: 8px  important!; 
+  outline: none;
+  font-size: 18px;
+  color: #7fa2f5;
+  letter-spacing: 0.4px;
+ } 
+
+.registerInput3, .registerInput2{
+  padding: 5px 15px;
+  width: 250px;
+  height: 40px;
+  border: 1 solid grey important!;
+  outline: none;
+  font-size: 18px;
+  color: #7fa2f5;
+  letter-spacing: 0.4px;
+}
+
+.loginInputPas, .registerInput4 , .addInput{
+  padding: 5px 15px;
+  width: 250px;
+  height: 40px;
+  border-left:1 solid grey important!; 
+  border-right:1 solid grey important!; 
+  border-bottom:1 solid grey important!; 
+  border-bottom-left-radius: 8px   important!;
+  border-bottom-right-radius: 8px  important!; 
+  transition: 0.3s;
+  outline: none;
+  font-size: 18px;
+  color: #7fa2f5;
+  letter-spacing: 0.4px; 
+}
+
+.addInput{
+  height: 30px;
+}
+
+.uploadBtn{
+  margin-top: 25px;
+  width: 64px;
+  height: 64px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("https://www.nicepng.com/png/detail/129-1298352_upload-icon-logo-upload-file-png.png");
+}
+
+.addInput:focus, .loginInputUsr:hover, .loginInputPas:hover, .registerInput1:hover, .registerInput2:hover, .registerInput3:hover, .registerInput4:hover{
+  border: 5px solid #7fa2f5; 
+  border-radius: 9px;
+}
+
+::placeholder{
+  font-size: 18px;
+  color: black;
+}
+
+
+ .loginButton button, .registerButton button, .blahbtn , .btnAddVac button{
+  font-size: 20px;
+width: 250px;
+height: 40px;
+padding: 5px 15px;
+background-color: #7fa2f5;
+color: #ffffff;
+border-radius: 8px;
+border: 1px solid #7fa2f5;
+transition: 0.3s;
+margin-top: -45px;
+}
+.loginButton button:hover, .registerButton button:hover, .blahbtn:hover, .btnAddVac button:hover{
+  background-color: #4f7de8;
+} 
+
+.newVac, .addback button{
+  font-size: 20px;
+  width: 250px;
+  height: 40px;
+  padding: 5px 15px;
+  background-color: #5485f7;
+  color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #7fa2f5;
+  transition: 0.3s;
+  margin-top: 35px;
+  position: absolute;
+  left: 25px;
+}
+
+.newVac:hover,  .addback button:hover{
+  background-color: #225be1;
+} 
+
+nav button{
+  font-size: 20px;
+width: 100px;
+height: 40px;
+padding: 5px 15px;
+background-color: #ffffff;
+color: #7fa2f5;
+border-radius: 8px;
+transition: 0.3s;
+border: none;
+}
+nav button:hover{
+  background-color: #e8e8e8;
+  color: #4f7de8;
+}
+
+
+
+.loginReg{
+  text-align: center;
+  color: #7fa2f5;
+  transition: 0.3s;
+  font-size: 14px ;
+  text-decoration: none;
+  margin-top: -35px;
+}
+
+.loginReg:hover{
+  color: #4f7de8;
+}
+
+.imgSec{
+  align-self: center;
+  width: 65px;
+  height: 65px;
+  background-image: url("./image/shield.png");
+}
+
+.imgSec1{
+  align-self: center;
+  width: 65px;
+  height: 65px;
+  background-image: url("./image/privacy.png");
+}
+  
+
+
+
+
+
+
+
+.errLog{
+  font-size: 18px;
+  text-align: center;
+}
+
+.vacationsTopic {
+  font-family: 'Luckiest Guy', cursive;  height: 35%;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 55px;
+} 
+.xa{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info{
+  width: 50%;
+  color: #034cf5;
+  font-size: 22px;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+.vacationsCon{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 50px;
+
+}
+
+.vacation{
+  border-radius: 4px;
+  display: flex; 
+  flex-direction: column;
+  align-content: center; 
+  min-height: 450px;
+  width: 300px;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 25px;
+  background-color: rgba(73, 64, 101,0.9);
+  position: relative;
+}
+
+.topVac{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px 16px 16px 16px;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.4);
+}
+
+.midlleVac{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 24px 16px 16px 16px;
+}
+
+.vacPrice{
+  font-size: 20px;
+}
+
+
+
+.vacMain{
+font-size: 24px;
+font-weight: bold;
+}
+
+.vacFoll, .vacDes, .vacDate{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+    font-size: 20px;
+
+}
+
+.adminControl{
+  width: 100%;
+  display: flex;
+  margin-top: 15px;
+  flex-direction: row;
+  padding-top: 25px;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  border-top: 1px solid rgb(255, 255, 255, 0.4);
+
+}
+
+
+  .add button, .info button {
+  padding: 10px 25px;
+  background-color: #7fa2f5;
+  border: 2px solid #7fa2f5;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 18px;
+  margin: 10px 0 10px 0;
+  transition: 0.3s;
+}
+.edit{
+padding: 15px 10px ;
+  font-size: 18px;
+  margin-bottom: 78px;
+
+}
+.edit input{
+  background-color: rgba(73, 64, 101,0.9);
+  margin-top: 10px;
+  border: 2.5px solid #7fa2f5;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.edit button{
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+
+
+.newVacationForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 450px;
+  height: 550px;
+  background-color: rgba(73, 64, 101,1);
+  margin: 0 auto;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.newVacationLogo{
+  margin-bottom: 25px;
+}
+
+.vacDes{
+  margin-top: 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+
+.addback{
+  margin-left: 25px;
+}
+.btnAddVac{
+  margin-left: 15px;
+}
+
+img{
+  width: 100%;
+  height: 120px;
+  background-size: cover;
+}
+
+
+.follow{
+
+  width: 32px;
+  height: 32px;
+  background-image: url("./image/follow.png");
+  
+  
+}
+
+  
+.unfollow{
+  width: 32px;
+  height: 32px;
+  background-image: url("./image/unfollow.png");
+}
+
+.toglleBtn{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.chart{
+  height: 60%;
+  margin-top: 150px;
+}
+
+.center{
+  width: 50vw;
+  height: 500px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.logginon{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+   align-items: center;
+}
+
+.logginon button{
+  margin-top: 80px;
+}
+
+
+.adminBtnDel{
+  width: 32px;
+  height: 32px;
+  background-image: url("./image/bin.png");
+}
+.adminBtnEdit{
+  width: 32px;
+  height: 32px;
+  background-image: url("./image/editing.png");
+}
+
+
+
+
+.info button{
+  height: 50px;
+width: 120%;
+font-size: 25px;
+}
+
+.first{
+  margin-top: 45px;
+}
+
+.addInput {
+  border-radius: 5px;
+}
+
+.chart{
+  bottom: 250px;
+}
